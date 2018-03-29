@@ -126,7 +126,7 @@ while True:
         for detail in mlist:
             offlineActivityId = detail['offlineActivityId']
             print(offlineActivityId)
-            join_in_it(offlineActivityId, 13752012220)
+            join_in_it(offlineActivityId, phone)
             time.sleep(3)
     # 休息1s
     page += 1
