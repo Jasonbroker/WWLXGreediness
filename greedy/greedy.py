@@ -102,7 +102,7 @@ def join_in_it(id, phone_num):
     else:
         print(dic)
 
-# 一个单独的请求器，防止刷页面被封禁
+# 一个单独的未登录状态爬虫，防止刷页面被封禁
 spider_session = requests.session()
 spider_url = 'http://m.dianping.com/activity/static/pc/list'
 pre_callback = 'jQuery112405054301475677674'
