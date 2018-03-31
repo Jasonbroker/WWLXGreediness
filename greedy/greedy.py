@@ -152,7 +152,7 @@ def spider(phone, handler):
 def join_in_it(aid, phone_num, extra_count, title):
     payload = {'shippingAddress': '', 'extraCount': extra_count, 'birthdayStr': '', 'email': 'zhiye1@hotmail.com',
                'marryDayStr': '', 'babyBirths': '2018-03-06', 'pregnant': '', 'marryStatus': '0', 'comboId': '', 'branchId': '',
-               'usePassCard': '', 'passCardNo': '', 'isShareSina': 'false', 'isShareQQ': 'false',
+               'usePassCard': '', 'passCardNo': '', 'isShareSina': 'true', 'isShareQQ': 'true',
                'offlineActivityId': aid, 'phoneNo': phone_num}
     # 请求报名
     data = session.post(url, headers=headers, data=payload)
@@ -179,8 +179,8 @@ if __name__ == '__main__':
 
 # TODO:
 """
-1. cookie 持久化 cy=2; cye=beijing
+1. cookie 持久化 cy=2; cye=beijing, 账号批量登录报名
 2. 报名信息筛选
-2. mysql 存储已报名信息
+2. mysql 存储已报名信息，防止重复报名
 3. 自动签到
 """
