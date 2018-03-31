@@ -139,7 +139,7 @@ def spider(handler):
             for detail in mlist:
                 offlineActivityId = detail['offlineActivityId']
                 # TODO: 可以对商户进行筛选
-                handler(offlineActivityId, phone_num, '1', detail('activityTitle'))
+                handler(offlineActivityId, phone_num, '1', detail['activityTitle'])
                 time.sleep(3)
 
             current_page += 1
@@ -161,6 +161,7 @@ def join_in_it(aid, phone_num, extra_count, title):
         print('成功报名' + title)
     else:
         print('报名失败：', m_json)
+    print('tracking id', aid)
 
 # entrance
 if __name__ == '__main__':
