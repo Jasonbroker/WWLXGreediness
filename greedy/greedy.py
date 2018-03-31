@@ -111,7 +111,7 @@ def phone_num():
     return phone
 
 
-def spider(handler):
+def spider(phone, handler):
     current_page = 0
     prefered_ranger = 1024  # 最大页码数量，肯定是不会取到这么大的，所以ranger 是可调整的。
     while True:
@@ -150,7 +150,7 @@ def spider(handler):
 
 # 报名开始
 def join_in_it(aid, phone_num, extra_count, title):
-    payload = {'shippingAddress': '', 'extraCount': extra_count, 'birthdayStr': '', 'email': '',
+    payload = {'shippingAddress': '', 'extraCount': extra_count, 'birthdayStr': '', 'email': 'zhiye1@hotmail.com',
                'marryDayStr': '', 'babyBirths': '2018-03-06', 'pregnant': '', 'marryStatus': '0', 'comboId': '', 'branchId': '',
                'usePassCard': '', 'passCardNo': '', 'isShareSina': 'false', 'isShareQQ': 'false',
                'offlineActivityId': aid, 'phoneNo': phone_num}
@@ -175,7 +175,7 @@ if __name__ == '__main__':
     # 手机号验证
     phone_num = phone_num()
 
-    spider(join_in_it)
+    spider(phone_num, join_in_it)
 
 # TODO:
 """
