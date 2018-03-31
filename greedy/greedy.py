@@ -151,7 +151,7 @@ def spider(handler):
 # 报名开始
 def join_in_it(aid, phone_num, extra_count, title):
     payload = {'shippingAddress': '', 'extraCount': extra_count, 'birthdayStr': '', 'email': '',
-               'marryDayStr': '', 'babyBirths': '', 'pregnant': '', 'marryStatus': '0', 'comboId': '', 'branchId': '',
+               'marryDayStr': '', 'babyBirths': '2018-03-06', 'pregnant': '', 'marryStatus': '0', 'comboId': '', 'branchId': '',
                'usePassCard': '', 'passCardNo': '', 'isShareSina': 'false', 'isShareQQ': 'false',
                'offlineActivityId': aid, 'phoneNo': phone_num}
     # 请求报名
