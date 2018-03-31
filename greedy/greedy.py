@@ -140,7 +140,7 @@ def spider(phone, handler):
             for detail in mlist:
                 offlineActivityId = detail['offlineActivityId']
                 # TODO: 可以对商户进行筛选
-                handler(offlineActivityId, phone_num, '1', detail['activityTitle'])
+                handler(offlineActivityId, phone, '1', detail['activityTitle'])
                 time.sleep(3)
 
             current_page += 1
