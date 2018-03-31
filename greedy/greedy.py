@@ -117,6 +117,7 @@ def spider(phone, handler):
     while True:
         ts = int(time.time()*1000)
         # type = 0 全部霸王餐
+        print('current page ', current_page)
         param = {'page': current_page, 'callback': (pre_callback + '_' + str(ts)), 'cityId': 2, '_': ts}
         raw = spider_session.get(spider_url, params=param).text
         # jQuery -> json
